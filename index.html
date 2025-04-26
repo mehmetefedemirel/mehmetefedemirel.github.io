@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mehmet Efe Demirel - Mechatronic Engineering Student at Duzce University">
-    <title>Mehmet Efe Demirel - Personal Website</title>
+    <title>Mehmet Efe Demirel | Personal Website</title>
     <link rel="shortcut icon" href="images/site-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,14 +14,13 @@
 <body>
     <nav>
         <div class="container nav-container">
-            <a href="#" class="logo">Mehmet Efe Demirel</a>
+            <a href="#" class="logo">M. Efe Demirel</a>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#resume">Resume</a>
-                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -35,11 +34,10 @@
                     </div>
                 </div>
                 <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Mehmet Efe Demirel</span></h1>
+                    <h1>Mehmet Efe Demirel</h1>
                     <p class="subtitle">Mechatronic Engineering Student</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="cta-button">Get in Touch</a>
-                        <a href="#projects" class="secondary-button">View My Projects</a>
+                        <a href="#projects" class="secondary-button">View Projects</a>
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/mehmetefedemirel" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
@@ -49,15 +47,11 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2 data-aos="fade-up">About Me</h2>
+            <h2 data-aos="fade-up">About</h2>
             <div class="about-content" data-aos="fade-up" data-aos-delay="100">
                 <div class="about-text">
                     <p>I am a first-year Mechatronic Engineering student at Duzce University with a passion for robotics, automation, and embedded systems.</p>
@@ -69,31 +63,66 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2 data-aos="fade-up">My Projects</h2>
+            <h2 data-aos="fade-up">Projects</h2>
             <div class="project-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
-                        <img src="images/line-follower.jpg" alt="Line Follower Robot">
+                        <img src="images/line-follower.gif" alt="Line Follower Robot">
+                        <span class="project-status status-in-progress">In Progress</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Line Follower Robot</h3>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Line Follower Robot</h3>
+                            <span class="project-date">2025</span>
+                        </div>
                         <p>A basic autonomous robot that follows a black line on a white surface using infrared sensors. This project helped me understand sensor integration and basic control systems.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Infrared Sensors</span>
+                            <span class="tech-tag">Control Systems</span>
+                            <span class="tech-tag">Robotics</span>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>Progress</span>
+                                <span>20%</span>
+                            </div>
+                        </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
                         <img src="images/weather-station.jpg" alt="Arduino Weather Station">
+                        <span class="project-status status-completed">Completed</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Arduino Weather Station</h3>
-                        <p>A simple weather monitoring system using Arduino, temperature, humidity, and pressure sensors. This project introduced me to data collection and basic IoT concepts.</p>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Arduino Weather Station</h3>
+                            <span class="project-date">2025</span>
+                        </div>
+                        <p>An advanced weather monitoring system using Arduino, featuring real-time data collection of temperature, humidity, pressure, and air quality. This project aims to create a comprehensive environmental monitoring solution with data logging and remote access capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">DHT22</span>
+                            <span class="tech-tag">BMP280</span>
+                            <span class="tech-tag">MQ135</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Data Logging</span>
+                        </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="github-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -146,25 +175,15 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 data-aos="fade-up">Get in Touch</h2>
-            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
-            <p>&copy; 2024 Mehmet Efe Demirel. All rights reserved.</p>
+            <p>&copy; 2024 Mehmet Efe Demirel</p>
         </div>
     </footer>
+
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
