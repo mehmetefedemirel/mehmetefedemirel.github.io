@@ -50,29 +50,25 @@
                 <div class="project-info" style="grid-column: 1 / -1;">
                     <div class="project-description" data-aos="fade-up" style="background: var(--section-bg); padding: 2rem; border-radius: 10px; margin-bottom: 2.5rem;">
                         <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Project Description</h2>
-                        <p style="line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">In this project, I developed a versatile Weather Monitoring System using Arduino technology. The system captures real-time environmental parameters such as temperature, humidity, atmospheric pressure, and air quality, offering reliable data for environmental research, smart farming, and weather trend analysis.</p>
+                        <p style="line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">This project is designed to automate the irrigation process in a greenhouse using an Arduino Uno. The system utilizes a Real-Time Clock (RTC) module to schedule watering times accurately, a relay module to control the water pump, and is powered by a 9V battery. By automating the irrigation based on pre-set schedules rather than constant manual operation, the system ensures timely watering, reduces water waste, and supports healthier plant growth. It is a cost-effective and energy-efficient solution ideal for small to medium-scale greenhouse operations.</p>
                         
                         <h3 style="margin: 1.5rem 0 1rem; color: var(--secondary-color);">Key Features</h3>
                         <ul style="list-style: none; padding-left: 0;">
                             <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
                                 <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Real-time temperature and humidity monitoring
+                                Automatic Irrigation Control
                             </li>
                             <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
                                 <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Barometric pressure measurement
+                                Time Management with RTC Module
                             </li>
                             <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
                                 <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Air quality index calculation
+                                Low Energy Consumption with 9V Battery
                             </li>
                             <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
                                 <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Data logging and storage
-                            </li>
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Graphical data visualization
+                                Manual Intervention Option
                             </li>
                         </ul>
                     </div>
@@ -99,27 +95,27 @@
                     </div>
 
                     <div class="project-features" data-aos="fade-up" style="margin-bottom: 2.5rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">Key Features</h2>
+                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">System Functions</h2>
                         <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                             <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
                                 <i class="fas fa-clock" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">RTC Module</h4>
-                                <p style="color: var(--text-color);">Accurate temperature readings with ±0.5°C precision</p>
+                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Real-Time Clock (RTC) Tracking</h4>
+                                <p style="color: var(--text-color);">The system uses the DS3231 RTC module to keep track of the exact time even when the Arduino is powered off.</p>
                             </div>
                             <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
                                 <i class="fas fa-toggle-on" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Relay Module</h4>
-                                <p style="color: var(--text-color);">Relative humidity measurement with ±2% accuracy</p>
+                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Manual + Automatic Switching Support</h4>
+                                <p style="color: var(--text-color);">The system allows for both manual and automatic control of connected devices.</p>
                             </div>
                             <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
                                 <i class="fas fa-battery" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Battery</h4>
-                                <p style="color: var(--text-color);">Barometric pressure monitoring for weather prediction</p>
+                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Low Power Operation with External Battery</h4>
+                                <p style="color: var(--text-color);">It can operate using a 9V external battery via the Arduino’s DC jack.</p>
                             </div>
                             <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <i class="fas fa-smog" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Air Quality</h4>
-                                <p style="color: var(--text-color);">CO2 and air quality index measurement</p>
+                                <i class="fas fa-desktop" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Status Monitoring via Serial Output</h4>
+                                <p style="color: var(--text-color);">The system prints the current timestamp over the serial monitor every 10 seconds.</p>
                             </div>
                         </div>
                     </div>
