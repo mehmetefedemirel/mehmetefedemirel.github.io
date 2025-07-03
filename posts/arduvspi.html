@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sensor Selection in Mechatronics Systems - Blog</title>
+  <title>Arduino vs Raspberry Pi: Hangisini Seçmelisiniz? - Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -19,29 +19,126 @@
       color: #0f2c67;
       margin-bottom: 20px;
     }
-    nav a {
-      color: #0f2c67;
-      text-decoration: none;
-      font-weight: 600;
+    .back-link {
       display: inline-block;
+      padding: 10px 16px;
+      background-color: #0f2c67;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
       margin-bottom: 30px;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .back-link:hover {
+      background-color: #1e3a8a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #e2e8f0;
+    }
+    tr:nth-child(even) {
+      background-color: #f1f5f9;
     }
   </style>
 </head>
 <body>
+  
+  <a href="../blog.html" class="back-link">&larr; Blog'a Geri Dön</a>
 
-  <a href="../blog.html">&larr; Back to Blog</a>
+  <h1>Arduino vs Raspberry Pi: Hangisini Seçmelisiniz?</h1>
 
-  <h1>Sensor Selection in Mechatronics Systems</h1>
+  <p>Gömülü sistemlere ve hobi elektroniğine ilgi duyanlar için iki popüler platform öne çıkıyor: <strong>Arduino</strong> ve <strong>Raspberry Pi</strong>. Peki hangisi sizin projeniz için daha uygun? Bu yazıda iki sistemin avantajlarını, dezavantajlarını ve kullanım senaryolarını inceliyoruz.</p>
 
-  <p>The right sensor selection is crucial for the success of mechatronics projects. Sensors play a fundamental role in detecting physical parameters such as temperature, pressure, distance, and more. Choosing the appropriate sensor type not only affects accuracy but also system reliability and cost efficiency.</p>
+  <h2>Arduino Nedir?</h2>
+  <p>Arduino, mikrodenetleyici tabanlı, açık kaynaklı bir platformdur. Sensörlerle veri toplamak ve motorlar gibi fiziksel bileşenleri kontrol etmek için tasarlanmıştır.</p>
 
-  <p>In this post, we explore various sensor categories such as analog vs digital sensors, proximity sensors, and environmental sensors, along with their best use cases in mechatronics design.</p>
+  <h3>Avantajları</h3>
+  <ul>
+    <li>Gerçek zamanlı çalışma özelliği</li>
+    <li>Düşük güç tüketimi</li>
+    <li>Basit yapısı sayesinde kolay öğrenim</li>
+    <li>Düşük maliyetli donanım</li>
+  </ul>
 
-  <p>Moreover, we discuss the challenges in sensor integration, including calibration, noise reduction, and data interpretation strategies. Proper sensor selection and placement can significantly enhance the performance of robotic and automation systems.</p>
+  <h3>Dezavantajları</h3>
+  <ul>
+    <li>İşletim sistemi desteği yok</li>
+    <li>Sınırlı işlem gücü ve bellek</li>
+  </ul>
+
+  <h2>Raspberry Pi Nedir?</h2>
+  <p>Raspberry Pi, Linux tabanlı işletim sistemi çalıştırabilen bir mini bilgisayardır. Daha karmaşık ve yazılım odaklı projelerde tercih edilir.</p>
+
+  <h3>Avantajları</h3>
+  <ul>
+    <li>İşletim sistemi ile çok yönlü kullanım</li>
+    <li>Yüksek işlem gücü</li>
+    <li>HDMI, USB, ağ bağlantısı gibi multimedya desteği</li>
+    <li>Python, Java gibi gelişmiş dilleri çalıştırabilir</li>
+  </ul>
+
+  <h3>Dezavantajları</h3>
+  <ul>
+    <li>Gerçek zamanlı işlemler için uygun değil</li>
+    <li>Daha yüksek güç tüketimi</li>
+    <li>Yeni başlayanlar için daha karmaşık bir yapı</li>
+  </ul>
+
+  <h2>Hangi Durumda Hangisi?</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Proje Türü</th>
+        <th>Arduino</th>
+        <th>Raspberry Pi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>LED kontrolü, sensör verisi</td>
+        <td>✅ Uygun</td>
+        <td>🚫 Aşırıya kaçar</td>
+      </tr>
+      <tr>
+        <td>Kamera ile yüz tanıma</td>
+        <td>🚫 Yetersiz</td>
+        <td>✅ İdeal</td>
+      </tr>
+      <tr>
+        <td>Basit robotik projeler</td>
+        <td>✅ Uygun</td>
+        <td>✅ Uygun</td>
+      </tr>
+      <tr>
+        <td>Web sunucusu barındırmak</td>
+        <td>🚫 Desteklemez</td>
+        <td>✅ Uygun</td>
+      </tr>
+      <tr>
+        <td>Gerçek zamanlı motor kontrolü</td>
+        <td>✅ Mükemmel</td>
+        <td>🚫 Gecikme olabilir</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>İkisini Birlikte Kullanmak</h2>
+  <p>Birçok ileri seviye projede Arduino ve Raspberry Pi birlikte kullanılır. Arduino fiziksel bileşenleri kontrol ederken, Raspberry Pi verileri işler ve kullanıcıya sunar. Bu yapı hibrit sistemlerde yüksek performans sağlar.</p>
+
+  <h2>Sonuç</h2>
+  <p>Arduino; fiziksel dünya ile basit, güvenilir ve düşük maliyetli projelerde öne çıkarken, Raspberry Pi daha karmaşık yazılımlar ve veri işleme görevlerinde başarılıdır. Projenizin ihtiyaçlarına göre tercihinizi yapmanız en sağlıklı yol olacaktır.</p>
+
+  <p><strong>Siz hangisini kullanıyorsunuz? Benimle paylaşın!</strong></p>
 
 </body>
 </html>

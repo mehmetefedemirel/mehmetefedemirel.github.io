@@ -31,6 +31,42 @@ body {
     padding: 0 2rem;
 }
 
+#menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    z-index: 1100;
+}
+
+/* Mobilde göster */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: var(--section-bg);
+        flex-direction: column;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        display: none;
+        width: 180px;
+        z-index: 1050;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 /* Navigation */
 nav {
     position: fixed;
