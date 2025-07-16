@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arduino ile LED Yakıp Söndürmek: En Basit Proje - Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #1a365d;
+      margin-bottom: 20px;
+    }
+    .back-link {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #1a365d;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-bottom: 30px;
+    }
+    .back-link:hover {
+      background-color: #152e4d;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #e2e8f0;
+    }
+    tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+    pre code {
+      background-color: #f4f4f4;
+      padding: 10px;
+      display: block;
+      border-left: 3px solid #00aaff;
+      color: #333;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  
+  <a href="../blog.html" class="back-link">&larr; Blog'a Geri Dön</a>
+
+  <h1>Arduino ile LED Yakıp Söndürmek: En Basit Proje</h1>
+
+  <p>Bu yazıda, adım adım bir LED’i nasıl kontrol edebileceğinizi, kullandığınız malzemelerin ne işe yaradığını ve Arduino'nun temel çalışma prensibini öğreneceksiniz.</p>
+
+  <h3>Gerekli Malzemeler</h3>
+  <ul>
+    <li>1x Arduino Uno (veya uyumlu bir model)</li>
+    <li>1x LED (renk fark etmez)</li>
+    <li>1x 220Ω direnç</li>
+    <li>1x Breadboard</li>
+    <li>Birkaç jumper kablo</li>
+    <li>USB kablo (Arduino'yu bilgisayara bağlamak için)</li>
+  </ul>
+
+  <h2>Devre Şeması ve Bağlantılar</h2>
+  <h3>LED'in iki bacağı vardır:</h3>
+  <ul>
+    <li>Uzun bacak: Anot (+) → Arduino'nun dijital pinine bağlanır.</li>
+    <li>Kısa bacak: Katot (-) → Direnç üzerinden GND'ye bağlanır.</li>
+  </ul>
+  <h3>Bağlantı adımları:</h3>
+  <ol type="1">
+    <li>LED'in uzun bacağını Arduino'nun pin 13’üne bağla.</li>
+    <li>Kısa bacağı 220Ω direnç üzerinden breadboard üzerindeki GND hattına bağla.</li>
+    <li>Arduino’nun GND pini ile breadboard’un GND hattını bir jumper kabloyla bağla.</li>
+  </ol>
+
+  <h2>Kod Açıklaması</h2>
+  <pre><code>
+  void setup() {
+    pinMode(13, OUTPUT); // 13. pin çıkış olarak ayarlandı
+  }
+
+  void loop() {
+    digitalWrite(13, HIGH); // LED yanıyor
+    delay(1000);            // 1 saniye bekle
+    digitalWrite(13, LOW);  // LED sönüyor
+    delay(1000);            // 1 saniye bekle
+  }
+</code></pre>
+
+  <h3>Satır Satır Ne Oluyor?</h3>
+  <ul>
+    <li><em>setup():</em> Kod ilk başladığında bir kez çalışır. Burada 13. pinin çıkış olacağı tanımlanıyor.</li>
+    <li><em>loop():</em> Sonsuz döngü içinde LED bir saniye yanıyor, bir saniye sönüyor.</li>
+    <li><em>delay():</em> Belirtilen süre kadar bekler. Burada 1000 milisaniye = 1 saniye.</li>
+  </ul>
+
+  <h3>Yeni Başlayanlar İçin İpuçları</h3>
+  <ul>
+    <li>LED'i ters bağlarsan çalışmaz ama zarar da vermez. Sadece yanmaz.</li>
+    <li>Direnç, LED'in yanmasını engellemez; aşırı akımı sınırlayarak onu korur.</li>
+    <li>Arduino Uno'nun 13. pinine bağlı dahili LED de bu kodla birlikte yanıp söner!</li>
+  </ul>
+
+  <h3>Bu Projeyle Ne Öğrendik?</h3>
+   <ul>
+    <li>Arduino'nun dijital çıkış pini nasıl çalışır?</li>
+    <li>LED ve direnç nasıl bağlanır?</li>
+    <li>Kodlama yaparak fiziksel bir olayı nasıl kontrol edebiliriz?</li>
+  </ul>
+
+  <h2>Sonraki Adım?</h2>
+  <p>Aynı devreye bir buton ekleyerek "kullanıcı kontrolü" sağlayabilirsin. Bir sonraki yazımda bunu detaylıca anlatacağım.</p>
+
+</body>
+</html>
