@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akıllı Otopark Sistemi | Mehmet Efe Demirel</title>
+  <link rel="shortcut icon" href="../images/site-logo.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <nav class="nav"><div class="nav-inner"><a class="brand" href="../index.html"><span class="brand-mark">ME</span> Mehmet Efe Demirel</a><button class="menu-toggle" aria-label="Menüyü aç/kapat"><i class="fa-solid fa-bars"></i></button><div class="nav-links"><a href="../index.html#about">Profil</a><a href="../index.html#racing">DU Racing</a><a href="../index.html#projects">Projeler</a><a href="../blog.html">Blog</a><a href="../index.html#contact">İletişim</a></div></div></nav>
+  <main>
+    <section class="page-hero">
+      <div class="container page-grid">
+        <div class="reveal"><a href="../index.html#projects" class="crumb"><i class="fa-solid fa-arrow-left"></i> Projelere dön</a><p class="eyebrow">Gömülü Sistem / Otomasyon</p><h1>Akıllı Otopark Sistemi</h1><p class="lead">Araç giriş-çıkış algılama, doluluk takibi ve otomatik bariyer kontrolü için Arduino tabanlı prototip sistem.</p><div class="meta-row"><span class="meta-pill meta-progress">Geliştirme Aşamasında</span><span class="meta-pill">2026</span><span class="meta-pill">Mehmet Efe Demirel</span></div></div>
+        <div class="detail-image reveal"><img src="../images/smart-parking.svg" alt="Akıllı Otopark Sistemi"></div>
+      </div>
+    </section>
+    <section class="section" style="padding-top:34px">
+      <div class="container content-grid">
+        <aside class="side-card reveal"><h3>Teknik Özet</h3><ul><li><i class="fa-solid fa-check"></i> Mikrodenetleyici: Arduino Uno</li><li><i class="fa-solid fa-check"></i> Algılama: Ultrasonik sensör</li><li><i class="fa-solid fa-check"></i> Aktüatör: Servo motor</li><li><i class="fa-solid fa-check"></i> Arayüz: LCD ekran</li><li><i class="fa-solid fa-check"></i> Kontrol: Koşul tabanlı karar mantığı</li><li><i class="fa-solid fa-check"></i> Durum: Prototip geliştirme</li></ul></aside>
+        <article class="article">
+          <section class="article-section reveal"><h2>Problem</h2><p>Otopark giriş-çıkışlarında araç algılama, yer doluluk bilgisini takip etme ve bariyer kontrolünü otomatikleştirme ihtiyacına yönelik temel bir gömülü sistem prototipi tasarlanmıştır.</p></section>
+          <section class="article-section reveal"><h2>Sistem Mimarisi</h2><p>Sistemde sensörlerden gelen mesafe bilgisi mikrodenetleyici tarafından değerlendirilir. Araç algılandığında bariyer hareketi servo motor ile kontrol edilir, doluluk bilgisi ise kullanıcıya LCD ekran üzerinden gösterilir.</p><div class="spec-grid"><div class="spec"><strong>Mikrodenetleyici</strong><span>Arduino Uno</span></div><div class="spec"><strong>Algılama</strong><span>Ultrasonik sensör</span></div><div class="spec"><strong>Aktüatör</strong><span>Servo motor</span></div><div class="spec"><strong>Arayüz</strong><span>LCD ekran</span></div><div class="spec"><strong>Kontrol</strong><span>Koşul tabanlı karar mantığı</span></div><div class="spec"><strong>Durum</strong><span>Prototip geliştirme</span></div></div></section>
+          <section class="article-section reveal"><h2>Çalışma Mantığı</h2><div class="steps"><div class="step"><div><strong>Araç Algılama</strong><p class="muted">Ultrasonik sensör belirlenen eşik değerine göre araç varlığını algılar.</p></div></div><div class="step"><div><strong>Karar Verme</strong><p class="muted">Arduino, giriş ve çıkış durumunu yazılım mantığıyla işler.</p></div></div><div class="step"><div><strong>Bariyer Kontrolü</strong><p class="muted">Servo motor uygun açıya getirilerek bariyer açma-kapama hareketi oluşturulur.</p></div></div><div class="step"><div><strong>Durum Gösterimi</strong><p class="muted">Doluluk ve sistem durumu LCD ekrana aktarılır.</p></div></div></div></section>
+          <section class="article-section reveal"><h2>Görseller</h2><div class="gallery"><img src="../images/smart-parking.svg" alt="Akıllı Otopark Sistemi görseli"><img src="../images/smart-parking.svg" alt="Akıllı Otopark Sistemi görseli"><img src="../images/smart-parking.svg" alt="Akıllı Otopark Sistemi görseli"></div></section>
+          <section class="article-section reveal"><h2>Geliştirme Notları</h2><p>Bu projede temel amaç, sensör verisinin okunması, işlenmesi ve fiziksel bir çıkışa dönüştürülmesi sürecini gerçek bir otomasyon senaryosu üzerinde uygulamaktır.</p><h3>Gelecek Geliştirmeler</h3><ul><li><i class="fa-solid fa-arrow-trend-up"></i> Gerçek zamanlı doluluk sayacı</li><li><i class="fa-solid fa-arrow-trend-up"></i> Daha kararlı sensör filtreleme</li><li><i class="fa-solid fa-arrow-trend-up"></i> Kartlı geçiş veya RFID desteği</li><li><i class="fa-solid fa-arrow-trend-up"></i> Web tabanlı izleme paneli</li></ul></section>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><span>© Mehmet Efe Demirel</span><span>Otomotiv • Otomasyon • Gömülü Sistemler</span></div></footer>
+  <script src="../script.js"></script>
+</body></html>

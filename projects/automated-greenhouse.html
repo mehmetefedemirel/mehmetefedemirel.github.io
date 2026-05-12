@@ -1,153 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Proje | Otomatik Sera Sulama Sistemi </title>
-    <link rel="shortcut icon" href="../images/site-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otomatik Sera Sulama Sistemi | Mehmet Efe Demirel</title>
+  <link rel="shortcut icon" href="../images/site-logo.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <nav>
-        <div class="container nav-container">
-            <a href="../index.html" class="logo">M. Efe Demirel</a>
-            <button id="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
-            <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links">
-                <a href="../index.html#home">Ana Sayfa</a>
-                <a href="../index.html#about">Hakkımda</a>
-                <a href="../index.html#projects">Projeler</a>
-                <a href="../index.html#skills">Yetenekler</a>
-                <a href="../blog.html">Blog</a>
-                <a href="../index.html#resume">Özgeçmiş</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="project-detail">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-            <div class="project-header" data-aos="fade-up" style="margin-bottom: 3rem; display: flex; align-items: center; justify-content: center; position: relative; padding: 0 2rem;">
-                <div class="project-meta" style="position: absolute; left: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem;">
-                    <span class="project-category" style="background: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Otomasyon</span>
-                    <span class="project-date" style="color: var(--light-text);">2025</span>
-                </div>
-                <h1 style="font-size: 2.5rem; margin: 1rem 0; text-align: center; width: 100%; max-width: 800px; line-height: 1.2;">Otomatik Sera Sulama Sistemi</h1>
-                <span class="project-status status-completed" style="display: inline-block; margin-top: 1rem; position: absolute; right: 0;">Tamamlandı</span>
-            </div>
-
-            <div class="project-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
-                <div class="project-gallery" data-aos="fade-up" style="grid-column: 1 / -1;">
-                    <div class="main-image" style="margin-bottom: 2rem;">
-                        <img src="../images/automated-greenhouse.jpeg" alt="Otomatik Sera Sulama Sistemi" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    </div>
-                    <div class="gallery-thumbnails" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-                        <img src="../images/automated-greenhouse1.jpeg" alt="Şema" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;">
-                        <img src="../images/automated-greenhouse2.jpeg " alt="Veri Görüntüleme" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;">
-                        <img src="../images/automated-greenhouse3.jpg" alt="Devre" style="width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s;">
-                    </div>
-                </div>
-
-                <div class="project-info" style="grid-column: 1 / -1;">
-                    <div class="project-description" data-aos="fade-up" style="background: var(--section-bg); padding: 2rem; border-radius: 10px; margin-bottom: 2.5rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Proje Açıklaması</h2>
-                        <p style="line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">Bu proje, bir Arduino Uno kullanarak bir seradaki sulama işlemini otomatikleştirmek için tasarlanmıştır. Sulama zamanlarını doğru bir şekilde planlamak için bir Gerçek Zamanlı Saat (RTC) modülü, su pompasını kontrol etmek için bir röle modülü içerir ve 9V pil ile çalışarak taşınabilirlik ve basitlik sunar.</p>
-                        <p style="line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">Sistem Arduino mikrodenetleyicileri kullanılarak inşa edilmiş ve C++ ile programlanmıştır, bu da onu çeşitli sera kurulumları için son derece özelleştirilebilir hale getirmektedir.</p>
-                        <p style="line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">Sistem, sürekli manuel çalışma gerektirmek yerine önceden tanımlanmış programlara göre sulamayı otomatikleştirerek zamanında sulama sağlar, su israfını azaltır ve daha sağlıklı bitki büyümesini destekler.</p>
-                        <p style="line-height: 1.6; color: var(--text-color); margin-bottom: 1.5rem;">Hem uygun maliyetli hem de enerji tasarruflu olan bu çözüm, küçük ve orta ölçekli sera işletmeleri için idealdir.</p>
-                        <h3 style="margin: 1.5rem 0 1rem; color: var(--secondary-color);">Temel Özellikler</h3>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Otomatik Sulama Kontrolü
-                            </li>
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                RTC Modülü ile Zaman Yönetimi
-                            </li>
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                9V Pil ile Düşük Enerji Tüketimi
-                            </li>
-                            <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--text-color); position: absolute; left: 0; font-size: 1rem; top: 50%; transform: translateY(-50%);"></i>
-                                Manuel Müdahale Seçeneği
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="project-specs" data-aos="fade-up" style="margin-bottom: 2.5rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">Teknik Özellikler</h2>
-                        <div class="specs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                            <div class="spec-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px;">
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Mikrodenetleyici</h4>
-                                <p style="color: var(--text-color);">Arduino Uno</p>
-                            </div>
-                            <div class="spec-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px;">
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">RTC Modülü</h4>
-                                <p style="color: var(--text-color);">DS3231</p>
-                            </div>
-                            <div class="spec-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px;">
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Röle Modülü</h4>
-                                <p style="color: var(--text-color);">CW-020</p>
-                            </div>
-                            <div class="spec-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px;">
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Güç</h4>
-                                <p style="color: var(--text-color);">9V Pil</p>
-                        </div>
-                    </div>
-
-                    <div class="project-features" data-aos="fade-up" style="margin-bottom: 2.5rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">Sistem Fonksiyonları</h2>
-                        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                            <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <i class="fas fa-clock" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Gerçek Zamanlı Saat (RTC) Takibi</h4>
-                                <p style="color: var(--text-color);">Sistem, Arduino kapalı olduğunda bile tam zamanı takip etmek için DS3231 RTC modülünü kullanır.</p>
-                            </div>
-                            <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <i class="fas fa-toggle-on" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Manuel + Otomatik Anahtarlama Desteği</h4>
-                                <p style="color: var(--text-color);">Sistem, bağlı cihazların hem manuel hem de otomatik olarak kontrol edilmesini sağlar.</p>
-                            </div>
-                            <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <i class="fas fa-battery" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Harici Batarya ile Düşük Güçte Çalışma</h4>
-                                <p style="color: var(--text-color);">Arduino'nun DC jakı üzerinden 9V harici pil kullanarak çalışabilir.</p>
-                            </div>
-                            <div class="feature-item" style="background: var(--section-bg); padding: 1.5rem; border-radius: 10px; text-align: center;">
-                                <i class="fas fa-desktop" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                                <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Seri Çıkış Üzerinden Durum İzleme</h4>
-                                <p style="color: var(--text-color);">Sistem her 10 saniyede bir seri monitör üzerinden geçerli zaman damgasını yazdırır.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-links" data-aos="fade-up" style="display: flex; justify-content: space-between; margin-top: 3rem;">
-                        <a href="../index.html#projects" class="project-link" style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: var(--section-bg); border-radius: 5px; color: var(--primary-color); text-decoration: none; transition: background 0.3s;">
-                            <i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>
-                            Projelere Geri Dön
-                        </a>
-                        <a href="#" class="project-link" style="display: inline-flex; align-items: center; padding: 0.8rem 1.5rem; background: var(--primary-color); border-radius: 5px; color: white; text-decoration: none; transition: background 0.3s;">
-                            <i class="fab fa-github" style="margin-right: 0.5rem;"></i>
-                            GitHub'da Görüntüle
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="progress"></div>
+  <nav class="nav"><div class="nav-inner"><a class="brand" href="../index.html"><span class="brand-mark">ME</span> Mehmet Efe Demirel</a><button class="menu-toggle" aria-label="Menüyü aç/kapat"><i class="fa-solid fa-bars"></i></button><div class="nav-links"><a href="../index.html#about">Profil</a><a href="../index.html#racing">DU Racing</a><a href="../index.html#projects">Projeler</a><a href="../blog.html">Blog</a><a href="../index.html#contact">İletişim</a></div></div></nav>
+  <main>
+    <section class="page-hero">
+      <div class="container page-grid">
+        <div class="reveal"><a href="../index.html#projects" class="crumb"><i class="fa-solid fa-arrow-left"></i> Projelere dön</a><p class="eyebrow">Otomasyon</p><h1>Otomatik Sera Sulama Sistemi</h1><p class="lead">RTC modülü ve röle kontrolü ile belirlenen zamanlarda sulama işlemini otomatik gerçekleştiren mikrodenetleyici tabanlı sistem.</p><div class="meta-row"><span class="meta-pill meta-done">Tamamlandı</span><span class="meta-pill">2025</span><span class="meta-pill">Mehmet Efe Demirel</span></div></div>
+        <div class="detail-image reveal"><img src="../images/automated-greenhouse.jpeg" alt="Otomatik Sera Sulama Sistemi"></div>
+      </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; Mehmet Efe Demirel. Tüm hakları saklıdır.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="../script.js"></script>
-</body>
-</html> 
+    <section class="section" style="padding-top:34px">
+      <div class="container content-grid">
+        <aside class="side-card reveal"><h3>Teknik Özet</h3><ul><li><i class="fa-solid fa-check"></i> Mikrodenetleyici: Arduino Uno</li><li><i class="fa-solid fa-check"></i> Zamanlama: DS3231 RTC</li><li><i class="fa-solid fa-check"></i> Çıkış Kontrolü: Röle modülü</li><li><i class="fa-solid fa-check"></i> Güç: 9V pil</li><li><i class="fa-solid fa-check"></i> Yazılım: Arduino C/C++</li><li><i class="fa-solid fa-check"></i> Durum: Tamamlandı</li></ul></aside>
+        <article class="article">
+          <section class="article-section reveal"><h2>Problem</h2><p>Küçük ölçekli sera uygulamalarında sulamanın belirli zaman aralıklarında manuel müdahaleye ihtiyaç duymadan gerçekleştirilmesi hedeflenmiştir.</p></section>
+          <section class="article-section reveal"><h2>Sistem Mimarisi</h2><p>Arduino, RTC modülünden zaman bilgisini okuyarak belirlenen saatlerde röle modülünü tetikler. Röle üzerinden pompa veya vana kontrolü sağlanır. Bu yapı, basit ama gerçek bir otomasyon döngüsü oluşturur.</p><div class="spec-grid"><div class="spec"><strong>Mikrodenetleyici</strong><span>Arduino Uno</span></div><div class="spec"><strong>Zamanlama</strong><span>DS3231 RTC</span></div><div class="spec"><strong>Çıkış Kontrolü</strong><span>Röle modülü</span></div><div class="spec"><strong>Güç</strong><span>9V pil</span></div><div class="spec"><strong>Yazılım</strong><span>Arduino C/C++</span></div><div class="spec"><strong>Durum</strong><span>Tamamlandı</span></div></div></section>
+          <section class="article-section reveal"><h2>Çalışma Mantığı</h2><div class="steps"><div class="step"><div><strong>Zaman Bilgisi</strong><p class="muted">RTC modülü sistem kapalıyken bile zaman bilgisini korur.</p></div></div><div class="step"><div><strong>Koşul Kontrolü</strong><p class="muted">Arduino yazılımı mevcut saat ile sulama zamanını karşılaştırır.</p></div></div><div class="step"><div><strong>Röle Tetikleme</strong><p class="muted">Uygun koşul oluştuğunda röle çıkışı aktif edilir.</p></div></div><div class="step"><div><strong>Sulama Döngüsü</strong><p class="muted">Belirlenen süre sonunda sistem çıkışı kapatılır ve bekleme moduna döner.</p></div></div></div></section>
+          <section class="article-section reveal"><h2>Görseller</h2><div class="gallery"><img src="../images/automated-greenhouse.jpeg" alt="Otomatik Sera Sulama Sistemi görseli"><img src="../images/automated-greenhouse1.jpeg" alt="Otomatik Sera Sulama Sistemi görseli"><img src="../images/automated-greenhouse2.jpeg" alt="Otomatik Sera Sulama Sistemi görseli"></div></section>
+          <section class="article-section reveal"><h2>Geliştirme Notları</h2><p>Bu projede zaman tabanlı kontrol, röle ile yük sürme ve taşınabilir güç kullanımı gibi otomasyonun temel prensipleri uygulanmıştır. Proje, ileride nem sensörüyle kapalı çevrim kontrole genişletilebilir.</p><h3>Gelecek Geliştirmeler</h3><ul><li><i class="fa-solid fa-arrow-trend-up"></i> Toprak nem sensörü ile geri besleme</li><li><i class="fa-solid fa-arrow-trend-up"></i> LCD veya OLED durum ekranı</li><li><i class="fa-solid fa-arrow-trend-up"></i> Daha verimli güç yönetimi</li><li><i class="fa-solid fa-arrow-trend-up"></i> Kablosuz veri izleme</li></ul></section>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><span>© Mehmet Efe Demirel</span><span>Otomotiv • Otomasyon • Gömülü Sistemler</span></div></footer>
+  <script src="../script.js"></script>
+</body></html>

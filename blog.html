@@ -1,206 +1,32 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mehmet Efe Demirel | Blog</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mehmet Efe Demirel teknik blog yazıları.">
+  <title>Blog | Mehmet Efe Demirel</title>
   <link rel="shortcut icon" href="images/site-logo.png" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary-color: #1a365d;
-      --secondary-color: #2d3748;
-      --text-color: #2d3748;
-      --light-text: #4a5568;
-      --background: #ffffff;
-      --section-bg: #f7fafc;
-      --card-bg: #ffffff;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      --transition: all 0.3s ease;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--background);
-      color: var(--text-color);
-      margin: 0;
-      padding: 3rem 1rem 5rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    h1 {
-      font-weight: 700;
-      margin-top: 4rem;
-      margin-bottom: 3rem;
-      color: var(--primary-color);
-      text-align: center;
-      letter-spacing: 1.1px;
-    }
-    .blog-post {
-      background: var(--card-bg);
-      border-radius: 10px;
-      padding: 1.8rem 2rem;
-      margin-bottom: 2rem;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--section-bg);
-      transition: var(--transition);
-    }
-    .blog-post:hover {
-      box-shadow: 0 8px 15px rgba(26, 54, 93, 0.15);
-      border-color: var(--primary-color);
-      transform: translateY(-4px);
-    }
-    .blog-post h2 {
-      margin-top: 0;
-      color: var(--primary-color);
-      font-weight: 700;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-    .blog-post p {
-      margin-bottom: 1.2rem;
-      color: var(--light-text);
-      font-size: 1rem;
-    }
-    .read-more {
-      color: var(--primary-color);
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: var(--transition);
-      border-bottom: 1.5px solid transparent;
-    }
-    .read-more:hover {
-      border-color: var(--primary-color);
-    }
-    .home-button {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--primary-color);
-      color: #fff;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(26, 54, 93, 0.3);
-      text-decoration: none;
-      transition: var(--transition);
-      font-size: 20px;
-      user-select: none;
-    }
-    .home-button:hover {
-      background-color: #153057;
-      box-shadow: 0 4px 10px rgba(21, 48, 87, 0.5);
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 2rem 1rem 5rem;
-      }
-      .blog-post {
-        padding: 1.5rem 1.5rem;
-      }
-      .blog-post h2 {
-        font-size: 1.4rem;
-      }
-      .read-more {
-        font-size: 0.9rem;
-      }
-      .home-button {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <div class="container nav-container">
-      <a href="index.html" class="logo">M. Efe Demirel</a>
-      <button id="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-links">
-        <a href="index.html#home">Ana Sayfa</a>
-        <a href="index.html#about">Hakkımda</a>
-        <a href="index.html#projects">Projeler</a>
-        <a href="index.html#skills">Yetenekler</a>
-        <a href="blog.html">Blog</a>
-        <a href="index.html#resume">Özgeçmiş</a>
+  <div class="progress"></div>
+  <nav class="nav"><div class="nav-inner"><a class="brand" href="index.html"><span class="brand-mark">ME</span> Mehmet Efe Demirel</a><button class="menu-toggle" aria-label="Menüyü aç/kapat"><i class="fa-solid fa-bars"></i></button><div class="nav-links"><a href="index.html#about">Profil</a><a href="index.html#deneyim">Deneyim</a><a href="index.html#projects">Projeler</a><a href="blog.html" class="active">Blog</a><a href="index.html#contact">İletişim</a></div></div></nav>
+  <main>
+    <section class="page-hero">
+      <div class="container page-grid">
+        <div class="reveal"><a href="index.html" class="crumb"><i class="fa-solid fa-arrow-left"></i> Ana sayfaya dön</a><p class="eyebrow">Teknik Blog</p><h1>Notlar, karşılaştırmalar ve öğrenme çıktıları.</h1><p class="lead">Mekatronik, otomasyon, gömülü sistemler ve mühendislik teknolojileri üzerine Türkçe içerikler.</p></div>
+        <div class="detail-image reveal"><img src="images/blog.png" alt="Blog görseli"></div>
       </div>
-    </div>
-  </nav>
-
-  <h1>Blog</h1>
-
-    <article class="blog-post">
-    <h2>Mühendislik Yazılımları</h2>
-    <p>
-      Mühendislik projelerini yapmakta ve geliştirmekte kullanılan mühendislik programları ve sağladıkları kolaylıklar.
-    </p>
-    <a href="posts/muhyazilimla" class="read-more" aria-label="Read more about Sensor Selection"
-      >Daha fazla bilgi edinin &rarr;</a
-    >
-    <div style="text-align: right;">14.04.2026</div>
-  </article>
-
-  <article class="blog-post">
-    <h2>Mekatronik ve Siber Güvenlik: Geleceğin Kesişim Noktası</h2>
-    <p>
-      Mekatronik sistemler her geçen gün daha akıllı hale geliyor, peki onları siber saldırılara karşı kim koruyacak? Bu yazımda mekatronik ile siber güvenliğin nasıl iç içe geçtiğini kendi bakış açımdan anlatıyorum.
-    </p>
-    <a href="posts/mekatronikvesiber.html" class="read-more" aria-label="Read more about Sensor Selection"
-      >Daha fazla bilgi edinin &rarr;</a
-    >
-    <div style="text-align: right;">29.11.2025</div>
-  </article>
-
-  <article class="blog-post">
-    <h2>Endüstri 4.0 ve Mekatronikte Yapay Zekanın Geleceği</h2>
-    <p>
-      Mekatronik sistemlerde yapay zekanın rolü ve Endüstri 4.0'ın getirdiği dönüşümün geleceğe etkileri üzerine kısa bir bakış.
-    </p>
-    <a href="posts/4irandai.html" class="read-more" aria-label="Read more about Sensor Selection"
-      >Daha fazla bilgi edinin &rarr;</a
-    >
-    <div style="text-align: right;">26.09.2025</div>
-  </article>
-
-  <article class="blog-post">
-    <h2>Arduino ile LED Yakıp Söndürmek: En Basit Proje</h2>
-    <p>
-      Arduino dünyasına ilk adımınızı atıyorsanız, LED yakıp söndürmek tam anlamıyla "merhaba dünya" projesidir.
-    </p>
-    <a href="posts/led.html" class="read-more" aria-label="Read more about Sensor Selection"
-      >Daha fazla bilgi edinin &rarr;</a
-    >
-    <div style="text-align: right;">21.07.2025</div>
-  </article>
-
-  <article class="blog-post">
-    <h2>Arduino vs Raspberry Pi: Hangisini Seçmelisiniz?</h2>
-    <p>
-      Hangisi hangi senaryolar için daha mantıklı?
-    </p>
-    <a href="posts/arduvspi.html" class="read-more" aria-label="Read more about Sensor Selection"
-      >Daha fazla bilgi edinin &rarr;</a
-    >
-    <div style="text-align: right;">03.07.2025</div>
-  </article>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    </section>
+    <section class="section" style="padding-top:34px"><div class="container"><div class="projects-grid">
+      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">CAD / Mühendislik</span><span class="year">14.04.2026</span></div><h3>Mühendislik Uygulamaları: Yazılım Devrimi</h3><p>SolidWorks, CATIA ve AutoCAD gibi araçların mühendislik üretkenliğine etkisi.</p><a class="text-link" href="posts/muhendislik-yazilimlari.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Siber-Fiziksel Sistemler</span><span class="year">29.11.2025</span></div><h3>Mekatronik ve Siber Güvenlik</h3><p>Bağlı robotlar, IoT sistemleri ve güvenli tasarım düşüncesi.</p><a class="text-link" href="posts/mekatronik-ve-siber-guvenlik.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Endüstri 4.0</span><span class="year">26.09.2025</span></div><h3>Endüstri 4.0 ve Yapay Zeka</h3><p>Akıllı üretim, dijital ikiz ve yapay zekanın mekatronikteki yeri.</p><a class="text-link" href="posts/endustri-4-0-ve-yapay-zeka.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Arduino</span><span class="year">21.07.2025</span></div><h3>Arduino ile LED Yakıp Söndürmek</h3><p>Arduino dünyasına başlamak için temel devre ve kod mantığı.</p><a class="text-link" href="posts/arduino-led.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Platform Seçimi</span><span class="year">03.07.2025</span></div><h3>Arduino vs Raspberry Pi</h3><p>Hangi projede hangi platform daha mantıklı?</p><a class="text-link" href="posts/arduino-vs-raspberry-pi.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
+    </div></div></section>
+  </main>
+  <footer class="footer"><div class="container"><span>© Mehmet Efe Demirel</span><span>Teknik Blog</span></div></footer>
   <script src="script.js"></script>
-</body>
-</html>
+</body></html>
