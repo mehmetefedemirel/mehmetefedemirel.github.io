@@ -1,32 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mehmet Efe Demirel teknik blog yazıları.">
-  <title>Blog | Mehmet Efe Demirel</title>
-  <link rel="shortcut icon" href="images/site-logo.png" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="progress"></div>
-  <nav class="nav"><div class="nav-inner"><a class="brand" href="index.html"><span class="brand-mark">ME</span> Mehmet Efe Demirel</a><button class="menu-toggle" aria-label="Menüyü aç/kapat"><i class="fa-solid fa-bars"></i></button><div class="nav-links"><a href="index.html#about">Profil</a><a href="index.html#experience">Deneyim</a><a href="index.html#projects">Projeler</a><a href="blog.html" class="active">Blog</a><a href="index.html#contact">İletişim</a></div></div></nav>
-  <main>
-    <section class="page-hero">
-      <div class="container page-grid">
-        <div class="reveal"><a href="index.html" class="crumb"><i class="fa-solid fa-arrow-left"></i> Ana sayfaya dön</a><p class="eyebrow">Teknik Blog</p><h1>Notlar, karşılaştırmalar ve öğrenme çıktıları.</h1><p class="lead">Mekatronik, otomasyon, gömülü sistemler ve mühendislik teknolojileri üzerine Türkçe içerikler.</p></div>
-        <div class="detail-image reveal"><img src="images/blog.png" alt="Blog görseli"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mehmet Efe Demirel teknik blog yazıları."
+    />
+    <title>Blog | Mehmet Efe Demirel</title>
+    <link rel="shortcut icon" href="images/site-logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="progress"></div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">ME</span> Mehmet Efe Demirel</a
+        ><button class="menu-toggle" aria-label="Menüyü aç/kapat">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-links">
+          <a href="index.html#about">Profil</a
+          ><a href="index.html#experience">Deneyim</a
+          ><a href="index.html#projects">Projeler</a
+          ><a href="blog.html" class="active">Blog</a
+          ><a href="index.html#contact">İletişim</a>
+        </div>
       </div>
-    </section>
-    <section class="section" style="padding-top:34px"><div class="container"><div class="projects-grid">
-      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">CAD / Mühendislik</span><span class="year">14.04.2026</span></div><h3>Mühendislik Uygulamaları: Yazılım Devrimi</h3><p>SolidWorks, CATIA ve AutoCAD gibi araçların mühendislik üretkenliğine etkisi.</p><a class="text-link" href="posts/muhendislik-yazilimlari.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
-      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Siber-Fiziksel Sistemler</span><span class="year">29.11.2025</span></div><h3>Mekatronik ve Siber Güvenlik</h3><p>Bağlı robotlar, IoT sistemleri ve güvenli tasarım düşüncesi.</p><a class="text-link" href="posts/mekatronik-ve-siber-guvenlik.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
-      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Endüstri 4.0</span><span class="year">26.09.2025</span></div><h3>Endüstri 4.0 ve Yapay Zeka</h3><p>Akıllı üretim, dijital ikiz ve yapay zekanın mekatronikteki yeri.</p><a class="text-link" href="posts/endustri-4-0-ve-yapay-zeka.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
-      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Arduino</span><span class="year">21.07.2025</span></div><h3>Arduino ile LED Yakıp Söndürmek</h3><p>Arduino dünyasına başlamak için temel devre ve kod mantığı.</p><a class="text-link" href="posts/arduino-led.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
-      <article class="project-card reveal"><div class="project-body"><div class="project-top"><span class="category">Platform Seçimi</span><span class="year">03.07.2025</span></div><h3>Arduino vs Raspberry Pi</h3><p>Hangi projede hangi platform daha mantıklı?</p><a class="text-link" href="posts/arduino-vs-raspberry-pi.html">Yazıyı Oku <i class="fa-solid fa-arrow-right"></i></a></div></article>
-    </div></div></section>
-  </main>
-  <footer class="footer"><div class="container"><span>© Mehmet Efe Demirel</span><span>Teknik Blog</span></div></footer>
-  <script src="script.js"></script>
-</body></html>
+    </nav>
+    <main>
+      <section class="page-hero">
+        <div class="container page-grid">
+          <div class="reveal">
+            <a href="index.html" class="crumb"
+              ><i class="fa-solid fa-arrow-left"></i> Ana sayfaya dön</a
+            >
+            <p class="eyebrow">Teknik Blog</p>
+            <h1>Notlar, karşılaştırmalar ve öğrenme çıktıları.</h1>
+            <p class="lead">
+              Mekatronik, otomasyon, gömülü sistemler ve mühendislik
+              teknolojileri üzerine Türkçe içerikler.
+            </p>
+          </div>
+          <div class="detail-image reveal">
+            <img src="images/blog.png" alt="Blog görseli" />
+          </div>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 34px">
+        <div class="container">
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="category">CAD / Mühendislik</span
+                  ><span class="year">14.04.2026</span>
+                </div>
+                <h3>Mühendislik Uygulamaları: Yazılım Devrimi</h3>
+                <p>
+                  SolidWorks, CATIA ve AutoCAD gibi araçların mühendislik
+                  üretkenliğine etkisi.
+                </p>
+                <a class="text-link" href="posts/muhendislik-yazilimlari.html"
+                  >Yazıyı Oku <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="category">Siber-Fiziksel Sistemler</span
+                  ><span class="year">29.11.2025</span>
+                </div>
+                <h3>Mekatronik ve Siber Güvenlik</h3>
+                <p>
+                  Bağlı robotlar, IoT sistemleri ve güvenli tasarım düşüncesi.
+                </p>
+                <a
+                  class="text-link"
+                  href="posts/mekatronik-ve-siber-guvenlik.html"
+                  >Yazıyı Oku <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="category">Endüstri 4.0</span
+                  ><span class="year">26.09.2025</span>
+                </div>
+                <h3>Endüstri 4.0 ve Yapay Zeka</h3>
+                <p>
+                  Akıllı üretim, dijital ikiz ve yapay zekanın mekatronikteki
+                  yeri.
+                </p>
+                <a
+                  class="text-link"
+                  href="posts/endustri-4-0-ve-yapay-zeka.html"
+                  >Yazıyı Oku <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="category">Arduino</span
+                  ><span class="year">21.07.2025</span>
+                </div>
+                <h3>Arduino ile LED Yakıp Söndürmek</h3>
+                <p>
+                  Arduino dünyasına başlamak için temel devre ve kod mantığı.
+                </p>
+                <a class="text-link" href="posts/arduino-led.html"
+                  >Yazıyı Oku <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="category">Platform Seçimi</span
+                  ><span class="year">03.07.2025</span>
+                </div>
+                <h3>Arduino vs Raspberry Pi</h3>
+                <p>Hangi projede hangi platform daha mantıklı?</p>
+                <a class="text-link" href="posts/arduino-vs-raspberry-pi.html"
+                  >Yazıyı Oku <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <span>© Mehmet Efe Demirel</span><span>Teknik Blog</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
