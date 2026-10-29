@@ -34,21 +34,22 @@
       transform: translateX(3px);
     }
   </style>
- </head>
+ <meta name="description" content="Hava Bilgi Sistemi Prototipi — Mehmet Efe Demirel’in proje ve öğrenme notları." />
+</head>
  <body>
-  <div class="progress">
+  <div class="progress" aria-hidden="true">
   </div>
   <nav class="nav">
    <div class="nav-inner">
     <a class="brand" href="../index.html">
      <span class="brand-mark">ME</span>Mehmet Efe Demirel</a>
-    <button aria-label="Menüyü aç/kapat" class="menu-toggle">
+    <button aria-label="Menüyü aç/kapat" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
      <i class="fa-solid fa-bars">
      </i>
     </button>
-    <div class="nav-links">
+    <div class="nav-links" id="site-menu">
      <a href="../index.html#about">Profil</a>
-     <a href="../index.html#racing">DU Racing</a>
+     <a href="../index.html#skills">Yetenekler</a>
      <a href="../index.html#projects">Projeler</a>
      <a href="../blog.html">Blog</a>
      <a href="../index.html#contact">İletişim</a>
@@ -71,7 +72,7 @@
        Hava Bilgi Sistemi Prototipi
       </h1>
       <p class="lead">
-       Sıcaklık, nem, basınç ve hava kalitesi verilerini aynı sistem üzerinde toplayan, anlık gösterim ve veri kaydı mantığını temel alan Arduino tabanlı çevresel ölçüm prototipi.
+       Farklı sensörlerden aldığım verileri Arduino ile okuyup LCD ekranda gösterdiğim bir proje. SD kartla kayıt kısmını henüz test etmedim.
       </p>
       <div class="meta-row">
        <span class="meta-pill meta-done">
@@ -93,7 +94,7 @@
       </div>
      </div>
      <div class="detail-image reveal">
-      <img alt="Hava Bilgi Sistemi Prototipi" src="../images/weather-statio.jpg"/>
+      <img alt="Hava Bilgi Sistemi Prototipi" src="../images/weather-station.jpg"/>
      </div>
     </div>
    </section>
@@ -127,7 +128,7 @@
        <li>
         <i class="fa-solid fa-check">
         </i>
-        Depolama: SD kart modülü
+        Depolama: SD kart modülü (kayıt işlevi test edilmedi)
        </li>
        <li>
         <i class="fa-solid fa-check">
@@ -138,74 +139,19 @@
      </aside>
      <article class="article">
       <section class="article-section reveal">
-       <h2>
-        Problem
-       </h2>
-       <p>
-        Sıcaklık, nem, basınç ve hava kalitesi gibi çevresel değerlerin ayrı ayrı takip edilmesi kullanıcı açısından pratik değildir. Bu projede amaç, farklı sensörlerden gelen ölçüm verilerini tek bir mikrodenetleyici üzerinde toplamak, kullanıcıya anlık olarak göstermek ve ileride analiz edilebilecek bir veri toplama altyapısı oluşturmaktır.
-       </p>
+       <h2>Neden yaptım?</h2>
+       <p>Sıcaklık, nem ve basınç gibi değerleri aynı ekranda görmek istedim. Bunun için birkaç sensörü Arduino’ya bağlayıp LCD ekranda gösteren bir devre hazırladım.</p>
       </section>
       <section class="article-section reveal">
        <h2>
-        Sistem Mimarisi
+        Nasıl çalışıyor?
        </h2>
-       <p>
-        Sistemde DHT22, BMP280 ve MQ135 sensörlerinden gelen veriler Arduino Uno tarafından okunur. Ölçülen değerler yazılım tarafında anlamlı bir formata dönüştürülür, LCD ekran üzerinden kullanıcıya gösterilir ve SD kart modülü ile kayıt altına alınabilecek bir veri toplama yapısı oluşturulur. Bu mimari, çevresel izleme sistemlerinin temel giriş-işleme-çıkış akışını temsil eder.
-       </p>
-       <div class="spec-grid">
-        <div class="spec">
-         <strong>
-          Mikrodenetleyici
-         </strong>
-         <span>
-          Arduino Uno
-         </span>
-        </div>
-        <div class="spec">
-         <strong>
-          Sıcaklık / Nem
-         </strong>
-         <span>
-          DHT22
-         </span>
-        </div>
-        <div class="spec">
-         <strong>
-          Basınç
-         </strong>
-         <span>
-          BMP280
-         </span>
-        </div>
-        <div class="spec">
-         <strong>
-          Hava Kalitesi
-         </strong>
-         <span>
-          MQ135
-         </span>
-        </div>
-        <div class="spec">
-         <strong>
-          Depolama
-         </strong>
-         <span>
-          SD kart modülü
-         </span>
-        </div>
-        <div class="spec">
-         <strong>
-          Ekran
-         </strong>
-         <span>
-          16x2 LCD
-         </span>
-        </div>
-       </div>
+       <p>Arduino Uno, DHT22, BMP280 ve MQ135 sensörlerini okuyor. Gelen değerleri LCD ekrana yazdırıyorum. Devrede SD kart modülü de var ama veri kaydını henüz denemedim.</p>
+
       </section>
       <section class="article-section reveal">
        <h2>
-        Çalışma Mantığı
+        Adım adım
        </h2>
        <div class="steps">
         <div class="step">
@@ -244,26 +190,20 @@
            Kayıt
           </strong>
           <p class="muted">
-           Veriler analiz için depolama modülüne aktarılabilecek yapıdadır.
+           SD karta veri yazma ve kayıtları geri okuma işlemleri henüz doğrulanmadı.
           </p>
          </div>
         </div>
        </div>
       </section>
       <section class="article-section reveal">
-       <h2>
-        Test ve Sonuç
-       </h2>
-       <p>
-        Sistem, sensörlerden alınan sıcaklık, nem, basınç ve hava kalitesi verilerinin Arduino tarafından okunması ve LCD ekran üzerinde görüntülenmesi üzerine test edildi. Her sensörün veri üretme davranışı ayrı ayrı kontrol edildi, ardından sistem bütünleşik olarak çalıştırılarak çoklu sensör okuma akışı gözlemlendi.
-       </p>
-       <p>
-        Proje sonucunda farklı haberleşme ve veri okuma mantıklarına sahip sensörlerin aynı mikrodenetleyici üzerinde birlikte kullanılabileceği görüldü. Bu prototip, ileride kablosuz veri aktarımı, web paneli ve grafiksel veri analizi gibi özelliklerle daha gelişmiş bir çevresel izleme sistemine dönüştürülebilir.
-       </p>
+       <h2>Şu anki durum</h2>
+       <p>Sensör verilerini LCD ekranda gösteriyorum. SD kartın kayıt yapıp yapmadığını kontrol etmedim. Ölçümlerin doğruluğunu da ayrıca karşılaştırmam gerekiyor.</p>
+
       </section>
       <section class="article-section reveal">
        <h2>
-        Proje Çıktıları
+        Projede yaptıklarım
        </h2>
        <ul>
         <li>
@@ -289,17 +229,15 @@
         <li>
          <i class="fa-solid fa-check">
          </i>
-         SD kart modülü ile veri kaydı için genişletilebilir yapı
+         SD kart ile veri kaydı: doğrulama testi bekliyor
         </li>
        </ul>
       </section>
       <section class="article-section reveal">
        <h2>
-        Bu Projede Ne Öğrendim?
+        Neler öğrendim?
        </h2>
-       <p>
-        Bu projede birden fazla sensörden veri okuma, okunan değerleri yazılım içinde düzenleme ve kullanıcıya anlaşılır şekilde sunma konularında deneyim kazandım. Ayrıca çevresel ölçüm sistemlerinde sensör kalibrasyonu, veri kararlılığı ve kayıt altyapısının sistem güvenilirliği açısından önemli olduğunu gördüm.
-       </p>
+       <p>Birden fazla sensörü aynı Arduino’ya bağlamayı ve verilerini ekranda göstermeyi öğrendim. Okunan değerlerin doğru olup olmadığını kontrol etme ve sensör kalibrasyonu kısmında daha fazla çalışmam gerekiyor.</p>
       </section>
       <section class="article-section reveal">
        <h2>
@@ -308,18 +246,16 @@
        <div class="gallery">
         <img alt="Hava Bilgi Sistemi Prototipi görseli" src="../images/weather-station.jpg"/>
         <img alt="Hava Bilgi Sistemi Prototipi görseli" src="../images/sema.png"/>
-        <img alt="Hava Bilgi Sistemi Prototipi görseli" src="../images/weather-station.jpg"/>
+
        </div>
       </section>
       <section class="article-section reveal">
        <h2>
-        Geliştirme Notları
+        Notlarım
        </h2>
-       <p>
-        Bu proje, çoklu sensör okuma ve veri düzenleme konusunda temel bir mühendislik pratiği sağlar. Sensörlerden gelen ham değerlerin doğrudan kullanılmadan önce doğrulanması, filtrelenmesi ve kullanıcıya anlamlı biçimde sunulması gerektiği görülmüştür. Özellikle akıllı tarım, çevresel izleme ve veri toplama sistemleri için geliştirilebilir bir altyapı sunar.
-       </p>
+       <p>Önce SD kart kaydını deneyeceğim. Sonrasında verileri bilgisayara aktarıp grafiklerini incelemek istiyorum.</p>
        <h3>
-        Gelecek Geliştirmeler
+        Sırada ne var?
        </h3>
        <ul>
         <li>
@@ -330,7 +266,7 @@
         <li>
          <i class="fa-solid fa-arrow-trend-up">
          </i>
-         Web dashboard entegrasyonu
+         Verileri web üzerinden görüntüleme
         </li>
         <li>
          <i class="fa-solid fa-arrow-trend-up">
@@ -354,7 +290,7 @@
      © Mehmet Efe Demirel
     </span>
     <span>
-     Otomotiv • Otomasyon • Gömülü Sistemler
+     Robotik • Sistem • Test
     </span>
    </div>
   </footer>

@@ -23,15 +23,7 @@ const updateProgress = () => {
 window.addEventListener("scroll", updateProgress, { passive: true });
 updateProgress();
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  },
-  { threshold: 0.12 },
-);
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
 
 const sections = document.querySelectorAll("section[id]");
 const links = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -53,6 +45,17 @@ setActive();
 
 document.querySelectorAll("img").forEach((img) => {
   img.addEventListener("error", () => {
-    img.src = img.dataset.fallback || "images/smart-parking.svg";
+    if (img.dataset.fallbackApplied) return;
+    img.dataset.fallbackApplied = "true";
+    img.src = img.dataset.fallback || new URL("images/smart-parking.svg", document.querySelector("script[src$='script.js']").src).href;
   });
+});
+
+// Close the navigation with the keyboard.
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navLinks?.classList.contains("open")) {
+    navLinks.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.focus();
+  }
 });

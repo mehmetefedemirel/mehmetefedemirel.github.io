@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Arduino vs Raspberry Pi: Hangisini Seçmelisiniz? | Blog</title>
+    <title>Arduino mu, Raspberry Pi mi? | Mehmet Efe Demirel</title>
     <link
       href="../images/site-logo.png"
       rel="shortcut icon"
@@ -20,17 +20,18 @@
       rel="stylesheet"
     />
     <link href="../styles.css" rel="stylesheet" />
-  </head>
+  <meta name="description" content="Arduino mu, Raspberry Pi mi? — Mehmet Efe Demirel’in notları." />
+</head>
   <body>
-    <div class="progress"></div>
+    <div class="progress" aria-hidden="true"></div>
     <nav class="nav">
       <div class="nav-inner">
         <a class="brand" href="../index.html"
           ><span class="brand-mark">ME</span> Mehmet Efe Demirel</a
-        ><button aria-label="Menüyü aç/kapat" class="menu-toggle">
+        ><button aria-label="Menüyü aç/kapat" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <div class="nav-links">
+        <div class="nav-links" id="site-menu">
           <a href="../index.html#projects">Projeler</a
           ><a class="active" href="../blog.html">Blog</a
           ><a href="../index.html#contact">İletişim</a>
@@ -43,141 +44,21 @@
           ><i class="fa-solid fa-arrow-left"></i> Blog'a dön</a
         >
         <article class="post-article reveal">
-          <div class="meta-row">
+<div class="meta-row">
             <span class="meta-pill">Platform Seçimi</span
-            ><span class="meta-pill">03.07.2025</span>
+            ><time class="meta-pill" datetime="2025-07-03" title="Yayın tarihi">03.07.2025</time>
           </div>
-          <h1>Arduino vs Raspberry Pi: Hangisini Seçmelisiniz?</h1>
-          <p>
-            Elektronik, robotik veya otomasyon projelerine başlarken en çok
-            karşılaşılan sorulardan biri Arduino mu yoksa Raspberry Pi mi
-            kullanılacağıdır. Ben bu iki platformu birbirinin doğrudan rakibi
-            olarak görmek yerine, farklı ihtiyaçlara cevap veren iki ayrı araç
-            olarak değerlendiriyorum. Çünkü doğru seçim, projenin ne yapmak
-            istediğine ve sistemden ne beklendiğine göre değişir.
-          </p>
-          <p>
-            Arduino daha çok mikrodenetleyici tabanlı, düşük seviyeli kontrol
-            işleri için kullanılan bir platformdur. Raspberry Pi ise Linux
-            işletim sistemi çalıştırabilen küçük bir bilgisayardır. Bu nedenle
-            aynı projede benzer görünebilirler ama arka planda çalışma
-            mantıkları oldukça farklıdır. Birinde doğrudan pin kontrolü ve
-            gerçek zamanlı basit işlemler ön plandayken, diğerinde işletim
-            sistemi, dosya sistemi, ağ bağlantısı ve daha güçlü yazılım
-            kabiliyetleri ön plana çıkar.
-          </p>
-          <h2>Arduino Nedir?</h2>
-          <p>
-            Arduino, sensörlerden veri okumak, motorları kontrol etmek, LED,
-            röle veya servo gibi elemanları yönetmek için oldukça kullanışlıdır.
-            Basit, hızlı ve doğrudan çalışır. Ben Arduino’yu özellikle fiziksel
-            dünya ile doğrudan etkileşim kurulan projelerde daha pratik
-            buluyorum. Örneğin sıcaklık sensöründen veri alıp fan çalıştırmak,
-            çizgi izleyen robot yapmak veya bir butona basıldığında LED yakmak
-            gibi uygulamalarda Arduino oldukça uygundur.
-          </p>
-          <p>
-            Arduino’nun önemli avantajlarından biri öğrenmesinin kolay
-            olmasıdır. Kod yapısı sadedir, bağlantılar anlaşılırdır ve başlangıç
-            seviyesindeki biri bile kısa sürede çalışan bir devre kurabilir.
-            Ayrıca gerçek zamanlı kontrol gerektiren basit işlemlerde işletim
-            sistemi olmadığı için daha kararlı ve öngörülebilir davranır.
-          </p>
-          <h2>Raspberry Pi Nedir?</h2>
-          <p>
-            Raspberry Pi ise tek kart bilgisayar olarak düşünülebilir. Üzerinde
-            Linux tabanlı işletim sistemi çalıştırabilir, internete
-            bağlanabilir, kamera kullanabilir, dosya işleyebilir ve web sunucusu
-            gibi görevler üstlenebilir. Ben Raspberry Pi’yi daha çok yazılım
-            ağırlıklı, veri işleme veya görüntü işleme gerektiren projelerde
-            tercih edilebilir buluyorum.
-          </p>
-          <p>
-            Örneğin bir kamera görüntüsünü işleyip nesne tanıma yapmak, bir web
-            arayüzü üzerinden cihaz kontrol etmek veya verileri bir veritabanına
-            kaydetmek istiyorsak Raspberry Pi daha mantıklı bir seçim olabilir.
-            Ancak motorları doğrudan sürmek veya hassas zamanlama isteyen işleri
-            yapmak için genellikle ek sürücü kartları ve dikkatli tasarım
-            gerekir.
-          </p>
-          <h2>Temel Karşılaştırma</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Proje Türü</th>
-                <th>Arduino</th>
-                <th>Raspberry Pi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sensör okuma</td>
-                <td>Çok uygun</td>
-                <td>Uygun ama çoğu zaman fazla gelir</td>
-              </tr>
-              <tr>
-                <td>Motor kontrolü</td>
-                <td>Uygun</td>
-                <td>Ek donanımla uygun</td>
-              </tr>
-              <tr>
-                <td>Görüntü işleme</td>
-                <td>Genellikle yetersiz</td>
-                <td>Oldukça uygun</td>
-              </tr>
-              <tr>
-                <td>Web arayüzü</td>
-                <td>Sınırlı</td>
-                <td>Uygun</td>
-              </tr>
-              <tr>
-                <td>Düşük güç tüketimi</td>
-                <td>Daha avantajlı</td>
-                <td>Daha fazla güç tüketir</td>
-              </tr>
-              <tr>
-                <td>Başlangıç kolaylığı</td>
-                <td>Daha kolay</td>
-                <td>Linux bilgisi gerektirebilir</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2>Hangi Durumda Arduino Seçerim?</h2>
-          <p>
-            Benim için proje sensör, motor, röle veya LED gibi fiziksel
-            elemanların doğrudan kontrolüne dayanıyorsa Arduino daha uygun olur.
-            Özellikle hızlı prototipleme yapmak, düşük maliyetli bir kontrol
-            sistemi kurmak veya temel elektronik mantığını öğrenmek istiyorsam
-            Arduino ile başlamak daha mantıklıdır.
-          </p>
-          <h2>Hangi Durumda Raspberry Pi Seçerim?</h2>
-          <p>
-            Proje kamera, yapay zeka, ağ bağlantısı, veri kaydı veya web arayüzü
-            gibi daha gelişmiş yazılım ihtiyaçları içeriyorsa Raspberry Pi daha
-            doğru bir tercih olabilir. Raspberry Pi, bir bilgisayar gibi
-            çalıştığı için Python, veri tabanı, internet bağlantısı ve dosya
-            işlemleri konusunda çok daha esnektir.
-          </p>
-          <h2>İkisi Birlikte Kullanılabilir mi?</h2>
-          <p>
-            Bence en güçlü yaklaşım, bazı projelerde iki platformu birlikte
-            kullanmaktır. Arduino sensörleri okuyup motorları kontrol ederken,
-            Raspberry Pi verileri işleyebilir, arayüz sağlayabilir veya görüntü
-            işleme yapabilir. Böylece her kart kendi güçlü olduğu alanda
-            çalışır. Bu yaklaşım özellikle ileri seviye mekatronik ve robotik
-            projelerde oldukça faydalıdır.
-          </p>
-          <h2>Sonuç</h2>
-          <p>
-            Arduino ve Raspberry Pi arasında seçim yaparken önce projenin
-            ihtiyacını doğru belirlemek gerekir. Fiziksel dünya ile doğrudan ve
-            düşük seviyeli kontrol gerekiyorsa Arduino daha doğru bir
-            başlangıçtır. Daha güçlü yazılım, görüntü işleme, ağ bağlantısı veya
-            veri yönetimi gerekiyorsa Raspberry Pi daha avantajlı olabilir.
-            Benim bakış açıma göre önemli olan popüler olan kartı seçmek değil,
-            projenin gereksinimlerine en uygun platformu kullanmaktır.
-          </p>
-        </article>
+<h1>Arduino mu, Raspberry Pi mi?</h1>
+<p>Bu iki kartı karşılaştırırken asıl mesele projede ne yapmak istediğimiz. Arduino Uno ile Linux çalıştıran Raspberry Pi modelleri farklı işler için kullanılıyor. Raspberry Pi Pico ise mikrodenetleyici kartı olduğu için bu karşılaştırmanın dışında.</p>
+<h2>Arduino tarafı</h2>
+<p>Ben Arduino’yu sensör okuma, röle ve servo kontrolü gibi işlerde kullanıyorum. Küçük bir devre kurup kodu yükleyerek sonucu görmek kolay. Yine de zamanlamayı doğru kurmak gerekiyor; kodda uzun süre beklersem diğer işler de bekliyor.</p>
+<h2>Raspberry Pi tarafı</h2>
+<p>Kamera görüntüsü işlemek, dosyalarla çalışmak veya bir web arayüzü hazırlamak için Raspberry Pi daha uygun olabiliyor. Üzerinde işletim sistemi çalıştığı için kurulum ve programları da hesaba katmak gerekiyor.</p>
+<h2>Motor kontrolü</h2>
+<p>Her iki kartta da motor için uygun sürücü ve güç kaynağı gerekiyor. Yalnızca kartı seçmek yeterli değil; motorun ne kadar akım çektiğine de bakmak lazım.</p>
+<h2>Hangisini seçerdim?</h2>
+<p>Sensör okuyup birkaç çıkışı kontrol edeceğim bir işte Arduino ile başlardım. Kamera ve daha fazla veri işleme gerektiğinde Raspberry Pi’ye bakardım. İkisi birlikte de kullanılabilir: Arduino devreyi kontrol ederken Raspberry Pi arayüz ve veri işlerini yapabilir.</p>
+</article>
       </div>
     </main>
     <footer class="footer">

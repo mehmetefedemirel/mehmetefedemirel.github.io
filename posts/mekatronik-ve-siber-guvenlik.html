@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>
-      Mekatronik ve Siber Güvenlik: Geleceğin Kesişim Noktası | Blog
-    </title>
+    <title>Mekatronik ve siber güvenlik | Mehmet Efe Demirel</title>
     <link
       href="../images/site-logo.png"
       rel="shortcut icon"
@@ -22,17 +20,18 @@
       rel="stylesheet"
     />
     <link href="../styles.css" rel="stylesheet" />
-  </head>
+  <meta name="description" content="Mekatronik ve siber güvenlik — Mehmet Efe Demirel’in notları." />
+</head>
   <body>
-    <div class="progress"></div>
+    <div class="progress" aria-hidden="true"></div>
     <nav class="nav">
       <div class="nav-inner">
         <a class="brand" href="../index.html"
           ><span class="brand-mark">ME</span> Mehmet Efe Demirel</a
-        ><button aria-label="Menüyü aç/kapat" class="menu-toggle">
+        ><button aria-label="Menüyü aç/kapat" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <div class="nav-links">
+        <div class="nav-links" id="site-menu">
           <a href="../index.html#projects">Projeler</a
           ><a class="active" href="../blog.html">Blog</a
           ><a href="../index.html#contact">İletişim</a>
@@ -45,106 +44,19 @@
           ><i class="fa-solid fa-arrow-left"></i> Blog'a dön</a
         >
         <article class="post-article reveal">
-          <div class="meta-row">
+<div class="meta-row">
             <span class="meta-pill">Siber-Fiziksel Sistemler</span
-            ><span class="meta-pill">29.11.2025</span>
+            ><time class="meta-pill" datetime="2025-11-29" title="Yayın tarihi">29.11.2025</time>
           </div>
-          <h1>Mekatronik ve Siber Güvenlik: Geleceğin Kesişim Noktası</h1>
-          <p>
-            Mekatronik sistemler artık sadece mekanik parçalar, elektronik
-            kartlar ve kontrol yazılımlarından oluşmuyor. Günümüzde robotlar,
-            üretim hatları, sensör ağları, IoT cihazları ve otomasyon sistemleri
-            internete veya yerel ağlara bağlanarak çalışıyor. Bu durum
-            sistemleri daha akıllı ve esnek hale getirirken, aynı zamanda
-            güvenlik risklerini de beraberinde getiriyor. Ben bu nedenle siber
-            güvenliği, mekatronik sistemlerin dışında kalan ayrı bir konu olarak
-            değil, tasarım sürecinin doğal bir parçası olarak görüyorum.
-          </p>
-          <p>
-            Bir sistem fiziksel dünyada hareket üretiyorsa, o sisteme yapılacak
-            dijital bir müdahale gerçek hayatta fiziksel sonuçlar doğurabilir.
-            Bu durum mekatronik ve siber güvenlik kesişimini oldukça kritik hale
-            getiriyor. Örneğin bir robot kolunun yanlış komut alması, bir
-            sensörün hatalı veri göndermesi veya bir motor sürücüsünün yetkisiz
-            şekilde kontrol edilmesi yalnızca yazılımsal bir hata değil,
-            güvenlik ve iş güvenliği problemi de oluşturabilir.
-          </p>
-          <h2>Neden Önemli?</h2>
-          <p>
-            Bir üretim hattında çalışan robot kolu, kablosuz haberleşen bir
-            sensör ağı veya uzaktan kontrol edilen bir cihaz dış müdahaleye açık
-            olabilir. Bu nedenle sistem tasarlarken yalnızca “nasıl çalışır?”
-            sorusunu sormak yeterli değildir. Benim bakış açıma göre bir
-            mühendis aynı zamanda “Bu sistem nasıl korunur?”, “Hatalı veri
-            gelirse ne olur?” ve “Yetkisiz erişim fiziksel çıktıyı nasıl
-            etkiler?” sorularını da düşünmelidir.
-          </p>
-          <p>
-            Mekatronik sistemlerde siber güvenlik ihmali, üretim kaybından cihaz
-            arızasına kadar birçok sonuca yol açabilir. Özellikle endüstriyel
-            sistemlerde bir makinenin durması, sadece teknik bir problem değil
-            aynı zamanda ekonomik bir kayıp anlamına gelir. Daha kritik
-            sistemlerde ise güvenlik açığı insan sağlığını veya çevre
-            güvenliğini etkileyebilir.
-          </p>
-          <h2>Mekatronikçi İçin Güvenlik Bakışı</h2>
-          <ul>
-            <li>Sensör verilerinin güvenilir şekilde aktarılması</li>
-            <li>Kablosuz bağlantılarda temel güvenlik önlemlerinin alınması</li>
-            <li>Yetkisiz erişimin engellenmesi</li>
-            <li>
-              Hatalı veya değiştirilmiş verinin fiziksel çıktıya etkisinin
-              değerlendirilmesi
-            </li>
-            <li>
-              Kontrol sistemlerinde güvenli varsayılan durumların belirlenmesi
-            </li>
-            <li>
-              Güncelleme ve bakım süreçlerinin güvenli şekilde yönetilmesi
-            </li>
-          </ul>
-          <h2>Basit Bir Örnek</h2>
-          <p>
-            Bir sıcaklık sensöründen gelen veriye göre fan çalıştıran basit bir
-            sistem düşünelim. Eğer sensör verisi hatalı okunursa veya dışarıdan
-            değiştirilirse fan gereksiz yere çalışabilir ya da çalışması
-            gerekirken devreye girmeyebilir. Küçük bir projede bu sadece basit
-            bir hata gibi görünebilir, ancak endüstriyel ölçekte benzer bir
-            durum makine hasarına veya üretim sürecinin aksamasına neden
-            olabilir. Bu yüzden güvenilir veri, mekatronik sistemlerde en az
-            doğru mekanik tasarım kadar önemlidir.
-          </p>
-          <h2>Siber-Fiziksel Sistemler</h2>
-          <p>
-            Siber-fiziksel sistemler, yazılım ile fiziksel dünyanın doğrudan
-            etkileşimde olduğu yapılardır. Otonom araçlar, akıllı fabrikalar,
-            medikal cihazlar, insansız hava araçları ve endüstriyel robotlar bu
-            kapsama girer. Ben bu sistemlerde güvenliğin yalnızca şifreleme veya
-            parola kullanımıyla sınırlı olmadığını düşünüyorum. Güvenlik aynı
-            zamanda sistemin hata durumunda nasıl davranacağını, hangi komutları
-            kabul edeceğini ve hangi koşullarda kendini güvenli moda alacağını
-            da kapsar.
-          </p>
-          <h2>Gelecekte Neler Öne Çıkacak?</h2>
-          <p>
-            Otonom sistemler ve bağlı cihazlar yaygınlaştıkça mekatronik
-            mühendislerinin siber güvenlik farkındalığı daha önemli hale
-            gelecek. Bir robotun mekanik tasarımını yapmak kadar, o robotun
-            aldığı komutların güvenilirliğini değerlendirmek de değer kazanacak.
-            Bu nedenle temel ağ bilgisi, güvenli haberleşme, veri doğrulama ve
-            sistem güvenliği gibi konuların mekatronik eğitiminde daha fazla yer
-            alması gerektiğini düşünüyorum.
-          </p>
-          <h2>Sonuç</h2>
-          <p>
-            Mekatronik ve siber güvenlik gelecekte daha fazla iç içe geçecek.
-            Benim için bu alan, yalnızca güvenlik uzmanlarının değil, mekatronik
-            mühendislerinin de anlaması gereken bir kesişim noktasıdır. Çünkü
-            tasarlanan sistemin güvenli olması, onun çalışması kadar önemlidir.
-            Geleceğin mühendisleri, sistemleri sadece verimli ve işlevsel değil,
-            aynı zamanda dayanıklı ve güvenli tasarlayabilen kişiler olacak.
-          </p>
-        </article>
+<h1>Mekatronik ve siber güvenlik</h1>
+<p>İnternete ya da bir ağa bağlı çalışan cihazları düşününce güvenlik konusu da işin içine giriyor. Dışarıdan gelen bir komut, motorun veya başka bir çıkışın çalışmasını değiştirebiliyor. Bu yüzden bu konuyu biraz araştırmak istedim.</p>
+<h2>Yanlış veri gelirse</h2>
+<p>Bir sensör arızalanabilir veya gönderdiği veri dışarıdan değiştirilebilir. İkisinde de yanlış veriyle karşılaşırız ama çözmek için önce kaynağını bulmak gerekiyor.</p>
+<h2>Fan örneği</h2>
+<p>Sıcaklık yükseldiğinde çalışan bir fan düşünelim. Gelen değer yanlışsa fan gerektiği hâlde açılmayabilir. Sensör bağlantısı koparsa veya beklenmeyen bir değer gelirse ne olacağını da kodu yazarken düşünmek gerekiyor.</p>
+<h2>Benim çıkardığım sonuç</h2>
+<p>Ağa bağlı bir proje yaptığımda kimin komut gönderebildiğine ve bağlantı kesildiğinde cihazın ne yaptığına bakmak istiyorum. Şimdilik bu konuda öğrenmem gereken çok şey var. Küçük bir projede bu soruları sormakla başlayabilirim.</p>
+</article>
       </div>
     </main>
     <footer class="footer">

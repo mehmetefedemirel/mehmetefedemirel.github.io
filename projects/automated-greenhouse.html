@@ -43,20 +43,20 @@
         transform: translateX(3px);
       }
     </style>
-  </head>
+  <meta name="description" content="Otomatik Sera Sulama Sistemi — Mehmet Efe Demirel’in proje ve öğrenme notları." />
+</head>
   <body>
-    <div class="progress"></div>
+    <div class="progress" aria-hidden="true"></div>
     <nav class="nav">
       <div class="nav-inner">
         <a class="brand" href="../index.html"
           ><span class="brand-mark">ME</span> Mehmet Efe Demirel</a
-        ><button class="menu-toggle" aria-label="Menüyü aç/kapat">
+        ><button class="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="site-menu">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <div class="nav-links">
+        <div class="nav-links" id="site-menu">
           <a href="../index.html#about">Profil</a
-          ><a href="../index.html#racing">DU Racing</a
-          ><a href="../index.html#projects">Projeler</a
+          ><a href="../index.html#skills">Yetenekler</a><a href="../index.html#projects">Projeler</a
           ><a href="../blog.html">Blog</a
           ><a href="../index.html#contact">İletişim</a>
         </div>
@@ -72,9 +72,7 @@
             <p class="eyebrow">Otomasyon</p>
             <h1>Otomatik Sera Sulama Sistemi</h1>
             <p class="lead">
-              DS3231 RTC modülü ve röle kontrolü ile belirlenen zamanlarda
-              sulama işlemini otomatik başlatıp durduran Arduino tabanlı sera
-              otomasyonu prototipi.
+              Kuyudan su çeken motoru belirli saatlerde çalıştırmak için Arduino, saat modülü ve röleyle hazırladığım sulama sistemi.
             </p>
             <div class="meta-row">
               <span class="meta-pill meta-done">Tamamlandı</span
@@ -126,45 +124,16 @@
           </aside>
           <article class="article">
             <section class="article-section reveal">
-              <h2>Problem</h2>
-              <p>
-                Küçük ölçekli sera uygulamalarında sulamanın belirli zamanlarda
-                manuel müdahaleye ihtiyaç duymadan yapılması hedeflenmiştir.
-                Proje, zaman tabanlı otomasyon mantığını uygulamak ve röle
-                üzerinden harici bir yükün kontrolünü deneyimlemek amacıyla
-                geliştirilmiştir.
-              </p>
+              <h2>Neden yaptım?</h2>
+              <p>Kuyudan su çeken motorun belirli saatlerde çalışmasını istedim. Motorun bağlantısına röle ekledim, zamanlama için de Arduino ve DS3231 saat modülü kullandım.</p>
             </section>
             <section class="article-section reveal">
-              <h2>Sistem Mimarisi</h2>
-              <p>
-                Arduino Uno, DS3231 RTC modülünden anlık saat bilgisini okuyarak
-                yazılımda tanımlanan sulama zamanı ile karşılaştırır. Koşul
-                sağlandığında röle modülü tetiklenir ve pompa ya da vana
-                kontrolü için çıkış üretilir. Bu yapı giriş, karar verme ve
-                çıkış adımlarından oluşan temel bir otomasyon döngüsü oluşturur.
-              </p>
-              <div class="spec-grid">
-                <div class="spec">
-                  <strong>Mikrodenetleyici</strong><span>Arduino Uno</span>
-                </div>
-                <div class="spec">
-                  <strong>Zamanlama</strong><span>DS3231 RTC</span>
-                </div>
-                <div class="spec">
-                  <strong>Çıkış Kontrolü</strong><span>Röle modülü</span>
-                </div>
-                <div class="spec"><strong>Güç</strong><span>9V pil</span></div>
-                <div class="spec">
-                  <strong>Yazılım</strong><span>Arduino C/C++</span>
-                </div>
-                <div class="spec">
-                  <strong>Durum</strong><span>Tamamlandı</span>
-                </div>
-              </div>
+              <h2>Nasıl çalışıyor?</h2>
+              <p>Arduino, saat modülünden aldığı zamanı koddaki sulama saatiyle karşılaştırıyor. Saat geldiğinde röle çıkışı açılıyor, belirlenen süre sonunda kapanıyor. Sistem şu an yalnızca saate göre çalışıyor; toprak nemini ölçmüyor.</p>
+
             </section>
             <section class="article-section reveal">
-              <h2>Çalışma Mantığı</h2>
+              <h2>Adım adım</h2>
               <div class="steps">
                 <div class="step">
                   <div>
@@ -203,26 +172,12 @@
               </div>
             </section>
             <section class="article-section reveal">
-              <h2>Test ve Sonuç</h2>
-              <p>
-                Sistem, RTC modülünden alınan zaman bilgisine göre belirlenen
-                sulama saatlerinde röle çıkışını aktif edecek şekilde test
-                edildi. Arduino, DS3231 modülünden okunan mevcut saat bilgisini
-                yazılımda tanımlanan sulama zamanı ile karşılaştırdı. Koşul
-                sağlandığında röle çıkışı aktif edildi, belirlenen süre
-                tamamlandığında ise çıkış kapatılarak sistem bekleme durumuna
-                geçti.
-              </p>
-              <p>
-                Bu test sonucunda zaman tabanlı kontrol mantığı, röle ile yük
-                kontrolü ve mikrodenetleyici tabanlı karar verme yapısı
-                uygulanmış oldu. Sistem, ileride toprak nem sensörü eklenerek
-                yalnızca zamana bağlı değil, sensör geri beslemeli kapalı çevrim
-                bir sulama sistemine dönüştürülebilir.
-              </p>
+              <h2>Şu anki durum</h2>
+              <p>Röleyi kuyu motorunun bağlantısında kullandım. Uzun süreli çalışmasını ayrıca kontrol etmem gerekiyor. Toprak nemi ve su seviyesi takibini henüz eklemedim.</p>
+
             </section>
             <section class="article-section reveal">
-              <h2>Proje Çıktıları</h2>
+              <h2>Projede yaptıklarım</h2>
               <ul>
                 <li>
                   <i class="fa-solid fa-check"></i> DS3231 RTC modülü ile zaman
@@ -233,35 +188,21 @@
                   çıkışının kontrol edilmesi
                 </li>
                 <li>
-                  <i class="fa-solid fa-check"></i> Pompa veya vana sürmeye
-                  uygun temel kontrol döngüsü
+                  <i class="fa-solid fa-check"></i> Kuyudan su çeken motorun röle üzerinden kontrolü
                 </li>
                 <li>
                   <i class="fa-solid fa-check"></i> Arduino C/C++ ile koşul
                   tabanlı otomasyon algoritması
                 </li>
                 <li>
-                  <i class="fa-solid fa-check"></i> Geliştirilebilir
-                  sensör-actuator mimarisi
+                  <i class="fa-solid fa-check"></i> Saat koşuluna göre açma ve kapama
                 </li>
               </ul>
             </section>
             <section class="article-section reveal">
-              <h2>Bu Projede Ne Öğrendim?</h2>
-              <p>
-                Bu projede zaman tabanlı kontrol yapısını, RTC modülünün
-                mikrodenetleyici ile haberleşmesini ve röle üzerinden harici bir
-                yükün nasıl kontrol edilebileceğini uygulamalı olarak
-                deneyimledim. Ayrıca bir otomasyon sisteminde giriş verisi,
-                karar verme algoritması ve çıkış kontrolünün ayrı ayrı
-                tasarlanması gerektiğini öğrendim.
-              </p>
-              <p>
-                Proje, otomasyon sistemlerinde yalnızca devre kurmanın değil;
-                sistemin hangi koşulda çalışacağını, ne kadar süre aktif
-                kalacağını ve hata durumlarında nasıl güvenli kalacağını
-                düşünmenin de önemli olduğunu gösterdi.
-              </p>
+              <h2>Neler öğrendim?</h2>
+              <p>Saat modülünden veri okumayı ve buna göre röleyi kontrol etmeyi uyguladım. Arduino’daki kodu motor bağlantısıyla birlikte kullanmış oldum.</p>
+
             </section>
             <section class="article-section reveal">
               <h2>Görseller</h2>
@@ -279,16 +220,9 @@
               </div>
             </section>
             <section class="article-section reveal">
-              <h2>Geliştirme Notları</h2>
-              <p>
-                Mevcut sürümde sistem zaman tabanlı çalışmaktadır. Bu yaklaşım,
-                temel otomasyon mantığını göstermek için yeterlidir; ancak
-                gerçek sera koşullarında toprak nemi, su seviyesi ve enerji
-                verimliliği gibi değişkenlerin de izlenmesi gerekir. Bu nedenle
-                proje, sonraki aşamada sensör geri beslemeli daha akıllı bir
-                yapıya genişletilebilir.
-              </p>
-              <h3>Gelecek Geliştirmeler</h3>
+              <h2>Notlarım</h2>
+              <p>İleride toprak nem sensörü eklemek istiyorum. Böylece sulama yalnızca saate bağlı olmaz, toprağın durumuna göre de karar verebilir.</p>
+              <h3>Sırada ne var?</h3>
               <ul>
                 <li>
                   <i class="fa-solid fa-arrow-trend-up"></i> Toprak nem sensörü
@@ -319,7 +253,7 @@
     <footer class="footer">
       <div class="container">
         <span>© Mehmet Efe Demirel</span
-        ><span>Otomotiv • Otomasyon • Gömülü Sistemler</span>
+        ><span>Robotik • Sistem • Test</span>
       </div>
     </footer>
     <script src="../script.js"></script>
