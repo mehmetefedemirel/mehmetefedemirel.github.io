@@ -1581,3 +1581,6 @@ section[id]{scroll-margin-top:110px}
 #projects .projects-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:980px){#projects .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){#projects .projects-grid{grid-template-columns:1fr}}
+
+.team-experience{grid-column:1 / -1}
+.team-experience p{max-width:78ch}
